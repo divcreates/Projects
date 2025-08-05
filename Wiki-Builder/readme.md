@@ -12,6 +12,8 @@ WikiBuilder is an intelligent multi-agent app built with CrewAI and Streamlit th
 - ✅ Clickable Table of Contents in sidebar
 - ✅ Metadata (image, time taken, word count)
 - ✅ Built-in WebSearchTool – no external API needed
+- ✅ You can Test the multi-agent Wikipedia builder system directly from the terminal: python test_system.py (Use this to verify your setup before launching the Streamlit app.)
+
 
 ---
 
