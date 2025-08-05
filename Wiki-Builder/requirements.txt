@@ -1,0 +1,24 @@
+# Wikipedia Builder - Complete Requirements for Python 3.12+
+
+# Streamlit UI
+streamlit>=1.35.0
+
+# Core CrewAI with official tool suite (including inbuilt WebSearchTool).
+# Note: On Windows, 'crewai[tools]' will pull in chroma-hnswlib, which may require
+# Microsoft C++ Build Tools for compilation if no compatible wheel is available.
+# Download from: https://visualstudio.microsoft.com/visual-cpp-build-tools/
+crewai[tools]>=0.140.0
+
+# LangChain LLM Integration
+langchain-openai>=0.0.8
+langchain-community>=0.0.38
+openai>=1.12.0
+
+# Helper and Environment
+python-dotenv>=1.0.0
+requests>=2.31.0
+pydantic>=2.5.0
+
+
+
+
