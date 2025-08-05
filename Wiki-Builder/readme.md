@@ -68,6 +68,7 @@ Follow these steps to get the project running on your local machine.
 ### **Step 1: Clone or Set Up the Project**
 
 Create the project directory and files as described in the project structure.
+- git clone https://github.com/divcreates/Projects.git
 
 ### **Step 2: Create a Virtual Environment**
 
