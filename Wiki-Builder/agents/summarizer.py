@@ -3,7 +3,7 @@ from langchain_openai import ChatOpenAI
 import os
 
 def create_summarizer():
-    """Creates the Summarizer agent to organize and structure data"""
+    """Creates the Summarizer agent to organize and structure data for Wikipedia-style content"""
 
     # Initialize LLM
     llm = ChatOpenAI(
@@ -14,12 +14,15 @@ def create_summarizer():
 
     return Agent(
         role="Summarizer",
-        goal="Organize and summarize extracted data into structured, logical sections for Wikipedia-style content",
-        backstory="""You are an expert content organizer who takes raw research data and transforms it into 
-        well-structured summaries. You identify key themes, chronological events, and important concepts, 
-        then organize them into logical sections that will form the backbone of a Wikipedia article. 
-        You ensure information flows logically and all important aspects are covered.
-        Group facts into major sections, each with a suggested heading.”""",
+        goal="Organize and summarize extracted data into clear, well-structured sections for Wikipedia-style content",
+        backstory=(
+            "You are an expert content organizer. "
+            "Your job is to take raw extracted data (often messy or unordered) and transform it into a clear, structured summary. "
+            "Group related facts under logical section headings (e.g., Background, History, Technology, Impact). "
+            "Maintain a neutral tone. Organize events chronologically where applicable, and ensure smooth logical flow. "
+            "This summary will be passed to a Wikipedia-style formatter — so it must be clean, grouped, and complete. "
+            "Avoid lists of bullets unless necessary — use full paragraphs."
+        ),
         llm=llm,
         verbose=True,
         allow_delegation=False

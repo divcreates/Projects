@@ -2,6 +2,7 @@ from crewai import Agent
 from crewai_tools import WebsiteSearchTool
 from langchain_openai import ChatOpenAI
 import os
+import time
 
 def create_data_extractor():
     """Creates the Data Extractor agent to fetch facts from the web (max 3-4 searches)"""
@@ -20,10 +21,11 @@ def create_data_extractor():
         "You are a Data Extractor. "
         "When tasked with researching a topic, you must perform **no more than 3-4 distinct web searches**. "
         "Each search should be concise and focused on gathering key factual information. "
-        "Do not exceed three queries. Return the raw snippets from each search."
+        "Do not exceed three queries. Return the raw snippets from each search. "
+        "If the content retrieved from any site is very long, summarize or truncate it to just the important points."
     )
 
-    return Agent(
+    agent = Agent(
         role="Data Extractor",
         goal="Gather raw factual data from the web with at most three searches",
         backstory=backstory,
@@ -33,4 +35,4 @@ def create_data_extractor():
         allow_delegation=False
     )
 
-
+    return agent
