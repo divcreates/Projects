@@ -1,1 +1,43 @@
-/Website_Auditor
+# 🐍 Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# 🧪 Environment
+.env
+*.env
+
+# 📦 Virtual Environments
+venv/
+env/
+.venv/
+.env/
+
+# 📁 OS Files
+.DS_Store
+Thumbs.db
+
+# 💻 IDEs & Editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# 🔍 Pytest cache
+.pytest_cache/
+
+# 📄 Jupyter
+.ipynb_checkpoints/
+
+# 🏗️ Build artifacts
+build/
+dist/
+*.egg-info/
+
+# ⚙️ Gradio Temp
+gradio_cached_examples/
+
+# 🚫 Ignore node_modules if any frontend is used
+node_modules/
