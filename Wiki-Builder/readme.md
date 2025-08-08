@@ -1,60 +1,35 @@
-# 🧠 WikiBuilder - Your AI-Powered Wikipedia Article Generator
+# 🧠 WikiBuilder – Your AI-Powered Wikipedia Article Generator
 
-WikiBuilder is an intelligent multi-agent app built with CrewAI and Streamlit that takes a user prompt and generates a clean, well-structured Wikipedia-style article with images, formatted sections, and live logging.
+WikiBuilder is an intelligent multi-agent app built with **CrewAI** and **Streamlit** that takes a user prompt and generates a clean, well-structured Wikipedia-style article with images, formatted sections, and live logging.
+
+**Built By Div ❤️**  
+**3rd Year Internship Project – SBSSU x IIT Jammu (Summer 2025)**
 
 ---
 
 ## 🚀 Features
 
-- ✅ Minimal, distraction-free Streamlit UI
-- ✅ Auto-generated Wikipedia-style article with lead image
-- ✅ Real-time logging in terminal
-- ✅ Clickable Table of Contents in sidebar
-- ✅ Metadata (image, time taken, word count)
-- ✅ Built-in WebSearchTool – no external API needed
+- ✅ Minimal, distraction-free Streamlit UI  
+- ✅ Auto-generated Wikipedia-style article with lead image  
+- ✅ Real-time logging in terminal  
+- ✅ Clickable Table of Contents in sidebar  
+- ✅ Metadata (image, time taken, word count)  
+- ✅ Built-in WebSearchTool – no external API needed  
 
 ---
 
 ## 🛠 How It Works
 
 - **Agent Collaboration:**  
-  Data Extractor limits web searches → Summarizer consolidates info → Formatter produces polished Markdown in Wikipedia-style.
+  → Data Extractor limits web searches  
+  → Summarizer consolidates info  
+  → Formatter produces polished Markdown in Wikipedia-style.
 
 - **Inbuilt CrewAI WebSearchTool:**  
-  No external search SDK required, improving integration and control.
+  → No external SDKs – self-contained and efficient.
 
-- **Clickable Sidebar TOC:**  
-  Uses `st.header(…, anchor=…)` and sidebar anchor links.
-
-- **Images:**  
-  Inline display of Wikipedia lead images with graceful fallback.
-
-- **Performance Measurement:**  
-  Measures generation time precisely between start and end of the multi-agent process.
-
----
-
-## 🧪 Test Script
-
-Before launching the Streamlit UI, you can run `test_system.py` to test the full agent pipeline in the terminal.
-
-```bash
-python test_system.py
-```
-
-This will:
-- ✅ Run all agents (extractor, summarizer, formatter)  
-- ✅ Print the final article to console  
-- ✅ Help debug before using the UI
-
----
-
-## 🔧 Customization & Extensions
-
-- Modify agent prompts or increase/decrease search query limits in `agents/data_extractor.py` prompt.  
-- Adjust UI styling in `main.py` CSS.  
-- Add fallback images if Wikipedia images are missing.  
-- Extend CrewAI pipeline with custom agents or tools.
+- **Sidebar TOC & Metadata:**  
+  → Clean Table of Contents using anchors, real-time generation stats.
 
 ---
 
@@ -70,10 +45,10 @@ Wiki-Builder/
 │   └── page_formatter.py
 │
 ├── crew.py
-├── main.py                  # Streamlit frontend
-├── test_system.py           # Test full pipeline (CLI-based)
+├── main.py              # Streamlit frontend
+├── test_system.py       # CLI-based agent pipeline test
 ├── requirements.txt
-├── .env
+├── .env                 # API key config (ignored)
 └── README.md
 ```
 
@@ -81,71 +56,62 @@ Wiki-Builder/
 
 ## ⚙️ Setup & Installation
 
-Follow these steps to get the project running on your local machine.
-
-### **Prerequisites**
-
-- Python **3.12** (recommended)  
-- An OpenAI API Key  
-
-### **Step 1: Clone or Set Up the Project**
-
-Create the project directory and files as described in the project structure.
-- git clone https://github.com/divcreates/Projects.git
-
-### **Step 2: Create a Virtual Environment**
-
-Use a virtual environment to manage dependencies.
+### 1. Clone this Repository
 
 ```bash
-# Create the virtual environment
-python -m venv venv
+git clone https://github.com/divcreates/Projects.git
+cd Projects/Wiki-Builder
+```
 
-# Activate it
-# On Windows:
+### 2. Create a Virtual Environment
+
+```bash
+python -m venv venv
+# Activate:
+# Windows:
 venv\Scripts\activate
-# On macOS/Linux:
+# macOS/Linux:
 source venv/bin/activate
 ```
 
-### **Step 3: Install Dependencies**
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### **Step 4: Add Your OpenAI API Key**
+### 4. Add OpenAI API Key
 
-Create a file named `.env` in the root of your project directory and add your key:
+Create a `.env` file:
 
-```env
-OPENAI_API_KEY=your-secret-api-key-here
+```
+OPENAI_API_KEY=your-secret-key-here
 ```
 
-> ✅ Tip: The `.env` file is usually in `.gitignore` to avoid accidentally exposing your key.
-
-### **Step 5: Run the Application**
+### 5. Run the App
 
 ```bash
 streamlit run main.py
 ```
 
-The app will open in your browser. Enter a topic and let the AI generate your Wikipedia-style article!
+---
+
+## 🧪 Optional: Run Agents in Terminal
+
+```bash
+python test_system.py
+```
+
+Use this to test the full Crew pipeline before launching UI.
 
 ---
 
-## ⚠️ Troubleshooting
+## 🧠 Notes
 
-- **Missing images?**  
-  Some topics may lack Wikipedia images — this isn’t an error.
-
-- **Slow generation?**  
-  Enable async execution and streaming in CrewAI agent config.
-
-- **Pydantic warnings?**  
-  These are dependency-related. Can be ignored or resolved by upgrading packages.
+- **Missing images?** → Wikipedia sometimes lacks image metadata  
+- **Slow output?** → Consider async agent execution  
+- **Terminal errors?** → Ignore benign dependency warnings
 
 ---
 
 ## ❤️ Built By Div
-```
