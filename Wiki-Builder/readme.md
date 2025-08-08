@@ -6,12 +6,12 @@ WikiBuilder is an intelligent multi-agent app built with CrewAI and Streamlit th
 
 ## 🚀 Features
 
-- ✅ Minimal, distraction-free Streamlit UI  
-- ✅ Auto-generated Wikipedia-style article with lead image  
-- ✅ Real-time logging in terminal  
-- ✅ Clickable Table of Contents in sidebar  
-- ✅ Metadata (image, time taken, word count)  
-- ✅ Built-in WebSearchTool – no external API needed  
+- ✅ Minimal, distraction-free Streamlit UI
+- ✅ Auto-generated Wikipedia-style article with lead image
+- ✅ Real-time logging in terminal
+- ✅ Clickable Table of Contents in sidebar
+- ✅ Metadata (image, time taken, word count)
+- ✅ Built-in WebSearchTool – no external API needed
 
 ---
 
@@ -91,6 +91,7 @@ Follow these steps to get the project running on your local machine.
 ### **Step 1: Clone or Set Up the Project**
 
 Create the project directory and files as described in the project structure.
+- git clone https://github.com/divcreates/Projects.git
 
 ### **Step 2: Create a Virtual Environment**
 
@@ -147,3 +148,4 @@ The app will open in your browser. Enter a topic and let the AI generate your Wi
 ---
 
 ## ❤️ Built By Div
+```
